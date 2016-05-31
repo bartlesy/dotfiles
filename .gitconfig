@@ -1,0 +1,10 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Stan Bartlett
+	email = Stanley.Bartlett@cba.com.au
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[http]
+	sslVerify = false
