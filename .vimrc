@@ -22,8 +22,6 @@ set cursorline
 " show the matching part of the pair for [] {} and ()
 set showmatch
 
-set nowrap
-
 :set expandtab
 :set tabstop=4
 :set shiftwidth=4
@@ -39,3 +37,5 @@ set nowrap
 :syntax on
 
 :colorscheme koehler
+filetype plugin on
+au FileType py setl ofu=pythoncomplete#Complete
