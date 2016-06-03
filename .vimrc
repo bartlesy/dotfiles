@@ -38,4 +38,4 @@ set showmatch
 
 :colorscheme koehler
 filetype plugin on
-au FileType py setl ofu=pythoncomplete#Complete
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
