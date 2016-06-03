@@ -3,7 +3,7 @@
 # ty rob
 
 # chown files to user
-ls -a | xargs chown $USER:$USER
+ls -a | xargs chown $USER
 
 # Create symlinks 
 # List all dotfiles in directory

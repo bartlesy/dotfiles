@@ -52,14 +52,14 @@ ZSH_THEME="random"
 plugins=(git)
 
 # User configuration
-set HISTSIZE=-1
-set HISTFILESIZE=-1
+#set HISTSIZE=-1
+#set HISTFILESIZE=-1
 
 export PATH="/usr/local/cuda:/usr/local/cuda/bin:/usr/local/cuda/lib:/opt/local/bin:/opt/local/sbin:/Users/$USER/anaconda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
+source ~/dotfiles/history.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
