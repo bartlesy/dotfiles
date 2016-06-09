@@ -39,4 +39,5 @@ set showmatch
 
 :colorscheme koehler
 filetype plugin on
+autocmd BufWritePre * :%s/\s\+$//e
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
