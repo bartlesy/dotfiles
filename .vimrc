@@ -31,6 +31,7 @@ set showmatch
 :set ruler
 :set hlsearch
 :set mouse=a
+:set nowrap
 
 :nnoremap <CR> :noh<CR><CR>:<backspace>
 

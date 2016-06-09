@@ -10,4 +10,4 @@ ls -a | xargs chown $USER
 # Pipe and grep out dotfiles (to exclude ., .., run.sh, etc)
 # Concatenate pwd to dotfile and make symlink to home with flags:
 # 	-f force, -s symbolic link
-ls -a | egrep "^\.[a-zA-Z0-9]+" | xargs -I {} ln -f -s `pwd`/{} ~
+ls -a | egrep "^\.[a-zA-Z0-9]+" | grep -v '.git'  | xargs -I {} ln -f -s `pwd`/{} ~

@@ -59,7 +59,7 @@ export PATH="/usr/local/cuda:/usr/local/cuda/bin:/usr/local/cuda/lib:/opt/local/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source ~/dotfiles/history.sh
+# source ~/dotfiles/history.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
