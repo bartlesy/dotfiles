@@ -22,22 +22,23 @@ set cursorline
 " show the matching part of the pair for [] {} and ()
 set showmatch
 
-:set expandtab
-:set tabstop=4
-:set shiftwidth=4
-:set autoindent
-:set number
-:set backspace=2
-:set ruler
-:set hlsearch
-:set mouse=a
-:set nowrap
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
+set number
+set backspace=2
+set ruler
+set hlsearch
+set mouse=a
+set nowrap
+set colorcolumn=80
+set smarttab
+nnoremap <CR> noh<CR><CR><backspace>
 
-:nnoremap <CR> :noh<CR><CR>:<backspace>
+syntax on
 
-:syntax on
-
-:colorscheme koehler
+colorscheme koehler
 filetype plugin on
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * %s/\s\+$//e
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
