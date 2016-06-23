@@ -117,7 +117,7 @@ fi
 ##
 
 # MacPorts Installer addition on 2015-09-22_at_11:32:41: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 # Finished adapting your PATH environment variable for use with MacPorts.
 if [ -d "/usr/local/cuda" ]
 then
