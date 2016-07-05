@@ -26,15 +26,19 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
-set number
+set number " show line numbers
 set backspace=2
 set ruler
-set hlsearch
+set hlsearch " highlights search results
 set mouse=a
 set nowrap
 set colorcolumn=80
 set smarttab
+" Clear search highlight by hitting enter
 nnoremap <CR> noh<CR><CR><backspace>
+
+" toggle paste mode to get rid of spacing issues when pasting
+map <leader>pp :setlocal paste!<cr>
 
 syntax on
 
