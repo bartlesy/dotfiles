@@ -40,6 +40,16 @@ nnoremap <CR> noh<CR><CR><backspace>
 " toggle paste mode to get rid of spacing issues when pasting
 map <leader>pp :setlocal paste!<cr>
 
+" use ctrl + jklh for switching b/w vimsplits instead of ctrl+w -> jhlk
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" open new splits below/right of current vim file
+set splitbelow
+set splitright
+
 syntax on
 
 colorscheme koehler
