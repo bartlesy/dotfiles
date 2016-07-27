@@ -14,18 +14,6 @@ ZSH_THEME="random"
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -35,15 +23,7 @@ ZSH_THEME="random"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -59,7 +39,6 @@ export PATH="/usr/local/cuda:/usr/local/cuda/bin:/usr/local/cuda/lib:/opt/local/
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-# source ~/dotfiles/history.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -83,11 +62,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-alias gitgraph="git log --graph --full-history --all --color --pretty=format:'%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s - %an %ar'"
-
-alias notebook="cd ~ && jupyter notebook > /dev/null 2>&1 & popd"
+source ./aliases.sh
 alias pipin="pip install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org"
-
 alias pipin3="pip3 install --index-url=http://pypi.python.org/simple/ --trusted-host pypi.python.org"
 
 if [ -f "$(which cntlm)" ]
@@ -112,13 +88,6 @@ then
     export PYTHONPATH="/Users/$USER/caffe/python/:$HOME/anaconda/bin:$HOME/anaconda/lib/"
 fi
 
-##
-# Your previous /Users/$USER/.bash_profile file was backed up as /Users/$USER/.bash_profile.macports-saved_2015-09-22_at_11:32:41
-##
-
-# MacPorts Installer addition on 2015-09-22_at_11:32:41: adding an appropriate PATH variable for use with MacPorts.
-# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 if [ -d "/usr/local/cuda" ]
 then
         export CUDA_ROOT="/usr/local/cuda"
@@ -130,18 +99,7 @@ then
         #:/usr/local/lib
 fi
 
-# export DYLD_LIBRARY_PATH="/usr/local/cuda/lib:/usr/local/lib:/opt/local/lib:$DYLD_LIBRARY_PATH"
-
-# export LD_LIBRARY_PATH="/usr/local/bin:/usr/local/cuda/lib:$LD_LIBRARY_PATH"
-
-# export DYLD_FALLBACK_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$PATH:$PYTHONPATH"
-
 # export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig/:/Users/$USER/anaconda/pkgs/:$PKG_CONFIG_PATH"
-
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# source ~/git_prompt.sh
-
-# proml
 
 export CHEATCOLORS=true
 export PATH="/usr/local/sbin:$PATH"
@@ -156,4 +114,3 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
 export KEYTIMEOUT=1
-alias sudo='sudo '

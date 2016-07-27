@@ -30,10 +30,13 @@ set number " show line numbers
 set backspace=2
 set ruler
 set hlsearch " highlights search results
+set incsearch " search as characters are entered
 set mouse=a
 set nowrap
 set colorcolumn=80
 set smarttab
+set lazyredraw  " redraw only when necessary
+
 " Clear search highlight by hitting enter
 nnoremap <CR> noh<CR><CR><backspace>
 
