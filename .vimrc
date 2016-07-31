@@ -38,7 +38,7 @@ set smarttab
 set lazyredraw  " redraw only when necessary
 
 " Clear search highlight by hitting enter
-nnoremap <CR> nohl<CR><CR><backspace>
+nnoremap <CR> :nohlsearch<CR>
 
 " toggle paste mode to get rid of spacing issues when pasting
 map <leader>pp :setlocal paste!<cr>
