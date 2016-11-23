@@ -37,6 +37,8 @@ set colorcolumn=80
 set smarttab
 set lazyredraw  " redraw only when necessary
 
+set encoding=utf-8
+
 " Clear search highlight by hitting enter
 nnoremap <CR> :nohlsearch<CR>
 
@@ -56,6 +58,32 @@ set splitright
 syntax on
 
 colorscheme koehler
-filetype plugin on
 autocmd BufWritePre * %s/\s\+$//e
+filetype plugin on
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd CompleteDone * pclose
+
+
+" trying this vundle garbage
+set nocompatible              " required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+Plugin 'vim-scripts/indentpython.vim'
+Bundle 'Valloric/YouCompleteMe'
+
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete

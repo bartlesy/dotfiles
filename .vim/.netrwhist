@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/CMCCALL88/ML_Comparison/Datasets/Avazu_CTR'
+let g:netrw_dirhist_2='/Users/CMCCALL88/pandas-profiling/pandas_profiling'
+let g:netrw_dirhist_3='/Users/CMCCALL88/TU_CBSA_OTA/New_Data_2016_retry/Notebooks'
+let g:netrw_dirhist_4='/Users/CMCCALL88/pandas-profiling/pandas_profiling.egg-info'
+let g:netrw_dirhist_5='/Users/CMCCALL88/anaconda/lib/python2.7/site-packages/deap'
+let g:netrw_dirhist_6='/Users/CMCCALL88/anaconda/lib/python2.7/site-packages/deap/tools'
+let g:netrw_dirhist_7='/Users/CMCCALL88/anaconda/lib/python2.7/site-packages/deap'
+let g:netrw_dirhist_8='/Users/CMCCALL88/CBSA_OTA_Compuscan/data/raw/Compuscan/Performance'
