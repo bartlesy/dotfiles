@@ -81,6 +81,9 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
+Plugin 'derekwyatt/vim-scala'
+
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 
 " All of your Plugins must be added before the following line
