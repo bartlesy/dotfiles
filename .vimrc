@@ -35,9 +35,17 @@ set mouse=a
 set nowrap
 set colorcolumn=80
 set smarttab
+set smartcase
 set lazyredraw  " redraw only when necessary
 
 set encoding=utf-8
+
+" tell vim to recognize .md files as markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.ipynb set filetype=json
+
+" to format json use :FormatJSON command
+com! FormatJSON %!python -m json.tool
 
 " Clear search highlight by hitting enter
 nnoremap <CR> :nohlsearch<CR>
@@ -58,10 +66,10 @@ set splitright
 syntax on
 
 colorscheme koehler
-autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePre * if &ft != 'markdown' | %s/\s\+$//e
 filetype plugin on
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd CompleteDone * pclose
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" autocmd CompleteDone * pclose
 
 
 " trying this vundle garbage
@@ -80,13 +88,20 @@ Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/nerdtree'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'chrisbra/Recover.vim'
 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
+" let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+
+" autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+" let NERDTreeMapOpenInTab='<ENTER>'
