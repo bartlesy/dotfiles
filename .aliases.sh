@@ -13,3 +13,5 @@ bindkey '^r' history-incremental-search-backward
 
 export KEYTIMEOUT=1
 alias sudo='sudo '
+
+alias htop_py='htop -p $(pgrep Python | python -c '\''import sys; print(",".join(map(lambda l: l.strip("\n"), sys.stdin.readlines())))'\'')'

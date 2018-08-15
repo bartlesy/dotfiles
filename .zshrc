@@ -103,4 +103,5 @@ export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python3"
 export PATH="/usr/local/sbin:$PATH"
 export WORKON_HOME=$HOME/envs
 source /usr/local/bin/virtualenvwrapper.sh
+export PYTHONHASHSEED=0
 
