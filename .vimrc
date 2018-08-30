@@ -37,6 +37,7 @@ set colorcolumn=80
 set smarttab
 set smartcase
 set lazyredraw  " redraw only when necessary
+set foldmethod=indent
 
 set encoding=utf-8
 
